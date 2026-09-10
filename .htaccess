@@ -1,0 +1,75 @@
+Options -MultiViews
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Auto-detect: local XAMPP (/iposetu/) vs live root (/)
+RewriteCond %{REQUEST_URI} ^/iposetu/ [NC]
+RewriteRule ^ - [E=BASE:/iposetu/]
+RewriteCond %{REQUEST_URI} !^/iposetu/ [NC]
+RewriteRule ^ - [E=BASE:/]
+
+# Set index file
+DirectoryIndex index.php index.html
+
+# Remove /index from URL
+RewriteCond %{THE_REQUEST} \s/index[\s?]
+RewriteRule ^index$ %{ENV:BASE} [R=301,L]
+
+# Remove .html or .php extensions from URLs
+RewriteCond %{THE_REQUEST} \s/index\.(html|php)[\s?]
+RewriteRule ^index\.(html|php)$ %{ENV:BASE} [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.(html|php)[\s?]
+RewriteRule ^([^.]+)\.(html|php)$ %{ENV:BASE}$1 [R=301,L]
+
+# Resolve extensionless URLs to actual files
+RewriteCond %{REQUEST_FILENAME} -d [OR]
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}.php -f
+RewriteRule ^(.+?)/?$ $1.php [L]
+
+# XML Sitemap Rewrites
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+RewriteRule ^sitemap-pages\.xml$ sitemap-pages.php [L]
+RewriteRule ^sitemap-ipo\.xml$ sitemap-ipo.php [L]
+RewriteRule ^sitemap-tools\.xml$ sitemap-tools.php [L]
+RewriteRule ^sitemap-news\.xml$ sitemap-news.php [L]
+
+# Dynamic IPO & SME Detail Pages (e.g. /ipo/karamtara-engineering-limited-ipo)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ipo/([^/]+)/?$ ipo/detail.php?slug=$1 [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^sme/([^/]+)/?$ ipo/detail.php?slug=$1&type=sme [QSA,L]
+</IfModule>
+
+# Custom 404 Error Page
+ErrorDocument 404 /iposetu/404.php
+
+
+# Enable PHP parsing in HTML files for XAMPP
+<IfModule mime_module>
+  AddType application/x-httpd-php .html
+</IfModule>
+<IfModule mod_php.c>
+  <FilesMatch "\.html$">
+    SetHandler application/x-httpd-php
+  </FilesMatch>
+</IfModule>
+<IfModule mod_php7.c>
+  <FilesMatch "\.html$">
+    SetHandler application/x-httpd-php
+  </FilesMatch>
+</IfModule>
+<IfModule mod_fcgid.c>
+  <FilesMatch "\.html$">
+    SetHandler application/x-httpd-php
+  </FilesMatch>
+</IfModule>

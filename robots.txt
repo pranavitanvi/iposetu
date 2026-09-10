@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/images/
+
+# Disallow private, administrative, and utility routes
+Disallow: /admin/
+Disallow: /api/
+Disallow: /scratch/
+Disallow: /search?*
+
+# Production Sitemap Index
+Sitemap: https://iposetu.com/sitemap.xml

@@ -1,0 +1,132 @@
+/* assets/css/responsive.css */
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .two-col-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero h1 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    margin: 16px;
+    max-width: calc(100% - 32px);
+  }
+  
+  .header-inner {
+    padding: 12px 24px;
+    border-radius: var(--radius-md);
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: var(--glass-border);
+    flex-direction: column;
+    padding: 24px;
+    align-items: flex-start;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+  
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background: rgba(0,0,0,0.03);
+    min-width: 100%;
+    margin-top: 10px;
+    opacity: 1;
+    display: none;
+    transform: none;
+  }
+  
+  .has-dropdown.active .dropdown-content {
+    display: block;
+  }
+  
+  .stats-grid {
+    position: static;
+    margin-top: 32px;
+  }
+  
+  .hero {
+    padding: 60px 24px;
+    margin: 0 16px 40px;
+  }
+  
+  .container {
+    padding: 0 20px;
+  }
+  
+  .container-fluid {
+    padding: 0 20px;
+  }
+  
+  .hero h1 {
+    font-size: 36px;
+  }
+  
+  .hero-search {
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+  
+  .hero-search input {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 16px 24px;
+    border-radius: var(--radius-pill);
+    margin-bottom: 12px;
+  }
+  
+  .ad-leaderboard {
+    height: auto;
+    padding: 20px;
+  }
+  
+  /* Tables become scrollable */
+  .table-container {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero h1 {
+    font-size: 32px;
+  }
+  
+  .ipo-card-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+}

@@ -1,0 +1,22 @@
+[2026-09-09 13:58:46] === IPOSETU Daily Sync Started ===
+[2026-09-09 13:58:46] Starting Upstox IPO sync...
+[2026-09-09 13:59:32] IPO sync SUCCESS: inserted=5, updated=151, errors=0
+[2026-09-09 13:59:32] Starting News sync...
+[2026-09-09 13:59:32] News sync SUCCESS
+[2026-09-09 13:59:32] === IPOSETU Daily Sync Completed ===
+[2026-09-09 13:59:32] 
+[2026-09-10 07:16:05] === IPOSETU Daily Sync Started ===
+[2026-09-10 07:16:05] Starting Upstox IPO sync...
+[2026-09-10 07:16:53] IPO sync SUCCESS: inserted=0, updated=154, errors=0
+[2026-09-10 07:16:53] Starting News sync...
+[2026-09-10 07:16:54] News sync SUCCESS
+[2026-09-10 07:16:54] === IPOSETU Daily Sync Completed ===
+[2026-09-10 07:16:54] 
+[2026-09-10 08:48:07] === IPOSETU Daily Sync Started ===
+[2026-09-10 08:48:07] Starting Upstox IPO sync...
+[2026-09-10 08:48:43] IPO sync SUCCESS: inserted=110, updated=44, errors=0
+[2026-09-10 08:48:43] IPOs Status Update: marked 0 records as CLOSED.
+[2026-09-10 08:48:43] Starting News sync...
+[2026-09-10 08:48:44] News sync SUCCESS
+[2026-09-10 08:48:44] === IPOSETU Daily Sync Completed ===
+[2026-09-10 08:48:44] 

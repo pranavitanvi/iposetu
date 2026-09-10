@@ -1,0 +1,140 @@
+/* assets/css/news-clean.css */
+
+.clean-news-wrapper {
+    background-color: #f8fafc; /* Match IPOSETU main background or slightly off-white */
+    padding: 60px 0 100px;
+    font-family: 'Inter', 'Roboto', sans-serif;
+}
+
+/* Header Section */
+.clean-news-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.clean-news-header h1 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+}
+
+.clean-news-header p {
+    font-size: 18px;
+    color: #475569;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* News Grid Layout */
+.clean-news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+@media (max-width: 1024px) {
+    .clean-news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 640px) {
+    .clean-news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* The Card */
+.clean-news-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.clean-news-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+}
+
+/* Card Image */
+.clean-card-img-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.clean-card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.clean-news-card:hover .clean-card-img-wrapper img {
+    transform: scale(1.05);
+}
+
+/* Card Content */
+.clean-card-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.clean-card-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+    width: max-content;
+}
+
+/* Professional Tag Colors */
+.tag-reliance { background-color: #e0f2fe; color: #0284c7; }
+.tag-hdfc { background-color: #fee2e2; color: #dc2626; }
+.tag-tcs { background-color: #f3e8ff; color: #7e22ce; }
+.tag-infosys { background-color: #dcfce7; color: #16a34a; }
+.tag-sbi { background-color: #fef3c7; color: #d97706; }
+.tag-market { background-color: #f1f5f9; color: #475569; }
+
+.clean-card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.clean-card-summary {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex: 1; /* Pushes meta to bottom */
+}
+
+.clean-card-meta {
+    font-size: 12px;
+    color: #94a3b8;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid #f1f5f9;
+}
