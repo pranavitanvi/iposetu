@@ -23,12 +23,12 @@ try {
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Index – Track IPOs &amp; Market Intelligence | IPOSETU</title>
 <meta name="description" content="Comprehensive financial information, real-time analytics, and investment tracking for Index on IPOSETU."/>
-<link class="style-link" href="/iposetu/assets/css/style.css?v=7.3" rel="stylesheet"/>
-<link href="/iposetu/assets/css/responsive.css?v=2.0" rel="stylesheet"/>
+<link class="style-link" href="<?= BASE_URL ?>assets/css/style.css?v=7.3" rel="stylesheet"/>
+<link href="<?= BASE_URL ?>assets/css/responsive.css?v=2.0" rel="stylesheet"/>
 <?php require_once __DIR__ . '/includes/seo_helper.php'; echo iposetu_render_head_seo(); ?>
 </head>
 <body>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/header.php'; ?>
 <section class="hero light-theme" style="padding: 40px 0 50px 0;">
 <div class="hero-bg-anim">
 <div class="glow-orb orb-1"></div>
@@ -121,13 +121,13 @@ try {
         <span class="ad-carousel-label">Advertisement</span>
         <div class="ad-carousel-track" id="heroAdTrack">
           <a class="ad-carousel-slide active" href="https://zerodha.com/" id="heroAdLink0" target="_blank" rel="noopener">
-            <img src="/iposetu/assets/images/banners/zerodha_square_ad.jpg" alt="Zerodha - Zero Brokerage" loading="eager">
+            <img src="<?= BASE_URL ?>assets/images/banners/zerodha_square_ad.jpg" alt="Zerodha - Zero Brokerage" loading="eager">
           </a>
           <a class="ad-carousel-slide" href="https://upstox.com/" id="heroAdLink1" target="_blank" rel="noopener">
-            <img src="/iposetu/assets/images/banners/upstox_square_ad.jpg" alt="Upstox - Trade with Upstox" loading="lazy">
+            <img src="<?= BASE_URL ?>assets/images/banners/upstox_square_ad.jpg" alt="Upstox - Trade with Upstox" loading="lazy">
           </a>
           <a class="ad-carousel-slide" href="https://www.angelone.in/" id="heroAdLink2" target="_blank" rel="noopener">
-            <img src="/iposetu/assets/images/banners/angel_one_square_ad.jpg" alt="Angel One - Trade with Angel One" loading="lazy">
+            <img src="<?= BASE_URL ?>assets/images/banners/angel_one_square_ad.jpg" alt="Angel One - Trade with Angel One" loading="lazy">
           </a>
         </div>
         <div class="ad-carousel-dots" id="heroAdDots">
@@ -519,7 +519,7 @@ try {
 <div class="play-btn-overlay">
 <svg fill="white" height="24" viewbox="0 0 24 24" width="24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
 </div>
-<img alt="Investor Protection Ad" id="adSlideImage" src="/iposetu/assets/images/banners/broker_ad_banner.png"/>
+<img alt="Investor Protection Ad" id="adSlideImage" src="<?= BASE_URL ?>assets/images/banners/broker_ad_banner.png"/>
 </div>
 <div class="ad-slide-text-area">
 <div id="adSlideText" style="min-height: 50px; font-weight: 500;">
@@ -1180,7 +1180,7 @@ try {
         <h2 style="font-size: 32px; font-weight: 800; color: #ffffff; margin: 0 0 8px; letter-spacing: -0.5px;">Best Demat Accounts for IPOs &amp; Trading</h2>
         <p style="color: #94a3b8; font-size: 15px; margin: 0; max-width: 620px;">Compare India's leading SEBI-registered discount brokers, brokerage charges, and open a free Demat account in 5 minutes.</p>
       </div>
-      <a class="btn" href="/iposetu/brokers/" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: #f8fafc; padding: 10px 22px; border-radius: 24px; font-size: 13px; font-weight: 600; text-decoration: none; transition: 0.2s;">View All Brokers →</a>
+      <a class="btn" href="<?= BASE_URL ?>brokers/" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: #f8fafc; padding: 10px 22px; border-radius: 24px; font-size: 13px; font-weight: 600; text-decoration: none; transition: 0.2s;">View All Brokers →</a>
     </div>
 
     <div class="broker-modern-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
@@ -1385,11 +1385,11 @@ try {
   </div>
 </section>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/footer.php'; ?>
 
-<script src="/iposetu/assets/js/components.js?v=6.1"></script>
-<script src="/iposetu/assets/js/ad-manager.js?v=5"></script>
-<script src="/iposetu/assets/js/main.js?v=2"></script>
+<script src="<?= BASE_URL ?>assets/js/components.js?v=6.1"></script>
+<script src="<?= BASE_URL ?>assets/js/ad-manager.js?v=5"></script>
+<script src="<?= BASE_URL ?>assets/js/main.js?v=2"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     function formatDisplayDate(dStr, showYear) {
@@ -1434,12 +1434,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const grid = document.getElementById('home-subscription-grid');
         if (!grid) return;
 
-        fetch('/iposetu/api/get_ipos.php?status=open')
+        fetch('<?= BASE_URL ?>api/get_ipos.php?status=open')
             .then(res => res.json())
             .then(data => {
                 let ipos = (data.status === 'success' && data.data) ? data.data : [];
                 if (ipos.length < 4) {
-                    fetch('/iposetu/api/get_ipos.php?status=upcoming')
+                    fetch('<?= BASE_URL ?>api/get_ipos.php?status=upcoming')
                         .then(res => res.json())
                         .then(upData => {
                             if (upData.status === 'success' && upData.data) {
@@ -1469,7 +1469,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const badgeText = isSme ? 'SME IPO' : 'MAINBOARD';
                 const badgeClass = isSme ? 'sme' : 'main';
                 const slug = ipo.slug || (ipo.symbol ? ipo.symbol.toLowerCase() : '#');
-                const url = isSme ? ('/iposetu/sme/' + slug) : ('/iposetu/ipo/' + slug);
+                const url = isSme ? ('<?= BASE_URL ?>sme/' + slug) : ('<?= BASE_URL ?>ipo/' + slug);
 
                 let gmpText = '--';
                 let gmpColor = '#64748b';
@@ -1535,7 +1535,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const tbody = document.getElementById('home-mainboard-tbody');
         if (!tbody) return;
 
-        fetch('/iposetu/api/get_ipos.php?type=mainboard')
+        fetch('<?= BASE_URL ?>api/get_ipos.php?type=mainboard')
             .then(res => res.json())
             .then(data => {
                 const ipos = (data.status === 'success' && data.data) ? data.data.slice(0, 6) : [];
@@ -1547,7 +1547,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 let html = '';
                 ipos.forEach(ipo => {
                     const slug = ipo.slug || (ipo.symbol ? ipo.symbol.toLowerCase() : '#');
-                    const url = '/iposetu/ipo/' + slug;
+                    const url = '<?= BASE_URL ?>ipo/' + slug;
                     const priceBand = ipo.price_band || (ipo.minimum_price && ipo.maximum_price ? ('₹' + ipo.minimum_price + ' - ₹' + ipo.maximum_price) : '--');
                     const openDt = formatDisplayDate(ipo.open_date, false);
                     const closeDt = formatDisplayDate(ipo.close_date, false);
@@ -1584,7 +1584,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const tbody = document.getElementById('home-sme-tbody');
         if (!tbody) return;
 
-        fetch('/iposetu/api/get_ipos.php?type=sme')
+        fetch('<?= BASE_URL ?>api/get_ipos.php?type=sme')
             .then(res => res.json())
             .then(data => {
                 const ipos = (data.status === 'success' && data.data) ? data.data.slice(0, 6) : [];
@@ -1596,7 +1596,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 let html = '';
                 ipos.forEach(ipo => {
                     const slug = ipo.slug || (ipo.symbol ? ipo.symbol.toLowerCase() : '#');
-                    const url = '/iposetu/sme/' + slug;
+                    const url = '<?= BASE_URL ?>sme/' + slug;
                     const priceBand = ipo.price_band || (ipo.minimum_price && ipo.maximum_price ? ('₹' + ipo.minimum_price + ' - ₹' + ipo.maximum_price) : '--');
                     const openDt = formatDisplayDate(ipo.open_date, false);
                     const closeDt = formatDisplayDate(ipo.close_date, false);
@@ -1633,7 +1633,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const tbody = document.getElementById('home-calendar-tbody');
         if (!tbody) return;
 
-        fetch('/iposetu/api/get_calendar.php')
+        fetch('<?= BASE_URL ?>api/get_calendar.php')
             .then(res => res.json())
             .then(data => {
                 let events = (data.status === 'success' && data.upcoming_events && data.upcoming_events.length > 0)
@@ -1658,7 +1658,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     const ipo = ev.ipo || {};
                     const isSme = (ipo.type || '').toUpperCase().includes('SME');
                     const slug = ipo.slug || (ipo.symbol ? ipo.symbol.toLowerCase() : '#');
-                    const url = isSme ? ('/iposetu/sme/' + slug) : ('/iposetu/ipo/' + slug);
+                    const url = isSme ? ('<?= BASE_URL ?>sme/' + slug) : ('<?= BASE_URL ?>ipo/' + slug);
                     const formattedDate = formatDisplayDate(ev.date, true);
 
                     html += `

@@ -7,12 +7,12 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Reviews – Track IPOs &amp; Market Intelligence | IPOSETU</title>
 <meta name="description" content="Comprehensive financial information, real-time analytics, and investment tracking for Reviews on IPOSETU."/>
-<link class="style-link" href="/iposetu/assets/css/style.css?v=6.9" rel="stylesheet"/>
-<link href="/iposetu/assets/css/responsive.css?v=2.0" rel="stylesheet"/>
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/seo_helper.php'; echo iposetu_render_head_seo(); ?>
+<link class="style-link" href="<?= BASE_URL ?>assets/css/style.css?v=6.9" rel="stylesheet"/>
+<link href="<?= BASE_URL ?>assets/css/responsive.css?v=2.0" rel="stylesheet"/>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/seo_helper.php'; echo iposetu_render_head_seo(); ?>
 </head>
 <body>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/header.php'; ?>
     <style>
         .editorial-feat { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 40px 0; background: #0f172a; color: white; border-radius: 16px; overflow: hidden; }
         .editorial-img { background: #334155; height: 100%; min-height: 300px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #94a3b8; }
@@ -168,11 +168,11 @@
         </div>
     </div>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/footer.php'; ?>
 
 <div id="sticky-bottom-ad-container"></div>
-<script src="/iposetu/assets/js/components.js?v=6.1"></script>
-<script src="/iposetu/assets/js/ad-manager.js?v=1.2"></script>
-<script src="/iposetu/assets/js/main.js"></script>
+<script src="<?= BASE_URL ?>assets/js/components.js?v=6.1"></script>
+<script src="<?= BASE_URL ?>assets/js/ad-manager.js?v=1.2"></script>
+<script src="<?= BASE_URL ?>assets/js/main.js"></script>
 </body>
 </html>

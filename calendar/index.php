@@ -5,8 +5,8 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Calendar – Track IPOs &amp; Market Intelligence | IPOSETU</title>
 <meta name="description" content="Comprehensive financial information, real-time analytics, and investment tracking for Calendar on IPOSETU."/>
-<link class="style-link" href="/iposetu/assets/css/style.css?v=6.9" rel="stylesheet"/>
-<link href="/iposetu/assets/css/responsive.css?v=2.0" rel="stylesheet"/>
+<link class="style-link" href="<?= BASE_URL ?>assets/css/style.css?v=6.9" rel="stylesheet"/>
+<link href="<?= BASE_URL ?>assets/css/responsive.css?v=2.0" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 <style>
     * { font-family: 'Inter', sans-serif; box-sizing: border-box; }
@@ -126,10 +126,10 @@
         .filter-tabs { flex-wrap: wrap; }
     }
 </style>
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/seo_helper.php'; echo iposetu_render_head_seo(); ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/seo_helper.php'; echo iposetu_render_head_seo(); ?>
 </head>
 <body>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/header.php'; ?>
 
 <div class="container" style="padding-bottom: 32px;">
 
@@ -216,10 +216,10 @@
 </div>
 
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/footer.php'; ?>
 
-<script src="/iposetu/assets/js/components.js?v=6.1"></script>
-<script src="/iposetu/assets/js/main.js"></script>
+<script src="<?= BASE_URL ?>assets/js/components.js?v=6.1"></script>
+<script src="<?= BASE_URL ?>assets/js/main.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     var allIpos = [];
@@ -267,7 +267,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Fetch data
-    fetch('/iposetu/api/get_ipos.php')
+    fetch('<?= BASE_URL ?>api/get_ipos.php')
         .then(function(res) { return res.json(); })
         .then(function(data) {
             allIpos = (data && data.data) ? data.data : [];
@@ -350,7 +350,7 @@ document.addEventListener("DOMContentLoaded", function() {
             var showCount = Math.min(dayEvents.length, 3);
             for (var e = 0; e < showCount; e++) {
                 var ev = dayEvents[e];
-                var detailUrl = '/iposetu/ipo/detail.php?id=' + ev.ipo.id;
+                var detailUrl = '<?= BASE_URL ?>ipo/detail.php?id=' + ev.ipo.id;
                 html += '<div class="cal-event ' + ev.cls + '" title="' + ev.label.replace(/"/g, '&quot;') + '" onclick="window.location.href=\'' + detailUrl + '\'">' + ev.ipo.name + '</div>';
             }
 
@@ -413,7 +413,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         var html = '';
         upcomingEvents.slice(0, 15).forEach(function(item) {
-            var detailUrl = '/iposetu/ipo/detail.php?id=' + item.ipo.id;
+            var detailUrl = '<?= BASE_URL ?>ipo/detail.php?id=' + item.ipo.id;
             html += '<div class="upcoming-item" onclick="window.location.href=\'' + detailUrl + '\'">';
             html += '<div class="upcoming-date-box">';
             html += '<div class="upcoming-day">' + item.date.getDate() + '</div>';
@@ -465,7 +465,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         var html = '';
         pagedItems.forEach(function(ipo) {
-            var detailUrl = '/iposetu/ipo/detail.php?id=' + ipo.id;
+            var detailUrl = '<?= BASE_URL ?>ipo/detail.php?id=' + ipo.id;
             var isSme = (ipo.type || '').toLowerCase() === 'sme';
             var typeBadge = isSme ? '<span class="type-badge type-sme">SME</span>' : '<span class="type-badge type-main">Mainboard</span>';
 

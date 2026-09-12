@@ -6,9 +6,9 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Open IPOs for Bidding Today – Real-Time Issue Details | IPOSETU</title>
 <meta name="description" content="Browse IPOs open for subscription today. Get price band ranges, minimum bid lots, application amounts, and live bidding status on IPOSETU."/>
-<link class="style-link" href="/iposetu/assets/css/style.css?v=6.9" rel="stylesheet"/>
-<link href="/iposetu/assets/css/responsive.css?v=2.0" rel="stylesheet"/>
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/seo_helper.php'; echo iposetu_render_head_seo(); ?>
+<link class="style-link" href="<?= BASE_URL ?>assets/css/style.css?v=6.9" rel="stylesheet"/>
+<link href="<?= BASE_URL ?>assets/css/responsive.css?v=2.0" rel="stylesheet"/>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/seo_helper.php'; echo iposetu_render_head_seo(); ?>
 <style>
     .animated-card {
         background: white;
@@ -50,7 +50,7 @@
 </style>
 </head>
 <body>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/header.php'; ?>
 
 <div class="container" style="padding-top: 60px; padding-bottom: 40px;">
     <div id="header-flex-container" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px;">
@@ -203,9 +203,9 @@
 </section>
 
 <!-- Footer -->
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/footer.php'; ?>
-<script src="/iposetu/assets/js/components.js?v=6.2"></script>
-<script src="/iposetu/assets/js/main.js"></script>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/footer.php'; ?>
+<script src="<?= BASE_URL ?>assets/js/components.js?v=6.2"></script>
+<script src="<?= BASE_URL ?>assets/js/main.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     function loadOpenIPOs() {
@@ -213,7 +213,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const smeGrid = document.getElementById("open-sme-grid");
         if (!mbGrid || !smeGrid) return;
         
-        fetch('/iposetu/api/get_ipos.php?status=open')
+        fetch('<?= BASE_URL ?>api/get_ipos.php?status=open')
             .then(res => res.json())
             .then(data => {
                 let mbHtml = '';

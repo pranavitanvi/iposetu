@@ -5,8 +5,8 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Subscription – Track IPOs &amp; Market Intelligence | IPOSETU</title>
 <meta name="description" content="Comprehensive financial information, real-time analytics, and investment tracking for Subscription on IPOSETU."/>
-<link class="style-link" href="/iposetu/assets/css/style.css?v=6.9" rel="stylesheet"/>
-<link href="/iposetu/assets/css/responsive.css?v=2.0" rel="stylesheet"/>
+<link class="style-link" href="<?= BASE_URL ?>assets/css/style.css?v=6.9" rel="stylesheet"/>
+<link href="<?= BASE_URL ?>assets/css/responsive.css?v=2.0" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
@@ -140,7 +140,7 @@
 </style>
 </head>
 <body>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/header.php'; ?>
 
 <div class="container" style="padding-bottom:80px;">
 
@@ -267,13 +267,13 @@
 </section>
 
 <!-- Footer -->
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/footer.php'; ?>
 
-<script src="/iposetu/assets/js/components.js?v=6.1"></script>
-<script src="/iposetu/assets/js/main.js"></script>
+<script src="<?= BASE_URL ?>assets/js/components.js?v=6.1"></script>
+<script src="<?= BASE_URL ?>assets/js/main.js"></script>
 <script>
 (function() {
-    const API = '/iposetu/api/get_subscription.php';
+    const API = '<?= BASE_URL ?>api/get_subscription.php';
     const PER_PAGE = 20;
     let allData = [], filteredData = [];
     let currentPage = 1;

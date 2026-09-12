@@ -6,8 +6,8 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>IPO FAQs – Comprehensive Answers to Common Questions | IPOSETU</title>
 <meta name="description" content="Find answers to all frequently asked questions about IPOs, ASBA, UPI mandates, cut-off prices, allotment chances, and listing day rules on IPOSETU."/>
-<link class="style-link" href="/iposetu/assets/css/style.css?v=6.9" rel="stylesheet"/>
-<link href="/iposetu/assets/css/responsive.css?v=2.0" rel="stylesheet"/>
+<link class="style-link" href="<?= BASE_URL ?>assets/css/style.css?v=6.9" rel="stylesheet"/>
+<link href="<?= BASE_URL ?>assets/css/responsive.css?v=2.0" rel="stylesheet"/>
 <style>
     .faq-item {
         border: 1px solid #e2e8f0;
@@ -66,7 +66,7 @@
 </style>
 </head>
 <body>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/header.php'; ?>
 
 <main class="container" style="padding-top: 24px;">
 
@@ -203,10 +203,10 @@
 
             <h4 style="font-size: 14px; font-weight: 800; color: #0f172a; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Related Guides</h4>
             <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
-                <li><a href="/iposetu/learn/how-to-apply-ipo.php" style="font-size: 13.5px; font-weight: 700; color: #2563eb; text-decoration: none;">How to Apply Step-by-Step →</a></li>
-                <li><a href="/iposetu/learn/asba.php" style="font-size: 13.5px; font-weight: 700; color: #2563eb; text-decoration: none;">What is ASBA? →</a></li>
-                <li><a href="/iposetu/learn/gmp.php" style="font-size: 13.5px; font-weight: 700; color: #2563eb; text-decoration: none;">Understanding GMP →</a></li>
-                <li><a href="/iposetu/learn/index.php" style="font-size: 13.5px; font-weight: 700; color: #475569; text-decoration: none;">← Back to Learning Center</a></li>
+                <li><a href="<?= BASE_URL ?>learn/how-to-apply-ipo.php" style="font-size: 13.5px; font-weight: 700; color: #2563eb; text-decoration: none;">How to Apply Step-by-Step →</a></li>
+                <li><a href="<?= BASE_URL ?>learn/asba.php" style="font-size: 13.5px; font-weight: 700; color: #2563eb; text-decoration: none;">What is ASBA? →</a></li>
+                <li><a href="<?= BASE_URL ?>learn/gmp.php" style="font-size: 13.5px; font-weight: 700; color: #2563eb; text-decoration: none;">Understanding GMP →</a></li>
+                <li><a href="<?= BASE_URL ?>learn/index.php" style="font-size: 13.5px; font-weight: 700; color: #475569; text-decoration: none;">← Back to Learning Center</a></li>
             </ul>
         </div>
     </aside>
@@ -215,12 +215,12 @@
 
 </main>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/footer.php'; ?>
 
 <div id="sticky-bottom-ad-container"></div>
-<script src="/iposetu/assets/js/components.js?v=6.1"></script>
-<script src="/iposetu/assets/js/ad-manager.js?v=1.2"></script>
-<script src="/iposetu/assets/js/main.js"></script>
+<script src="<?= BASE_URL ?>assets/js/components.js?v=6.1"></script>
+<script src="<?= BASE_URL ?>assets/js/ad-manager.js?v=1.2"></script>
+<script src="<?= BASE_URL ?>assets/js/main.js"></script>
 <script>
 function toggleFaq(header) {
     const item = header.parentElement;

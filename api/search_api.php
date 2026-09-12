@@ -52,7 +52,7 @@ try {
     foreach ($ipos as $ipo) {
         $type = strtolower($ipo['type'] ?? 'mainboard');
         // Universal search: redirect directly to category listing page to highlight the result in the table
-        $url = ($type === 'sme') ? "/iposetu/sme/" : "/iposetu/ipo/";
+        $url = ($type === 'sme') ? "<?= BASE_URL ?>sme/" : "<?= BASE_URL ?>ipo/";
         $status = strtoupper($ipo['status'] ?? 'UPCOMING');
         if (strtolower($status) === 'live') $status = 'OPEN';
         
@@ -79,35 +79,35 @@ $toolsCatalog = [
         'title' => 'SIP Calculator',
         'desc' => 'Calculate returns on Systematic Investment Plans',
         'keywords' => ['sip', 'mutual fund', 'investment', 'compounding', 'calculator'],
-        'url' => '/iposetu/tools/sip-calculator.php',
+        'url' => '<?= BASE_URL ?>tools/sip-calculator.php',
         'badge' => 'TOOL'
     ],
     [
         'title' => 'CAGR Calculator',
         'desc' => 'Calculate Compound Annual Growth Rate for investments',
         'keywords' => ['cagr', 'compound', 'growth', 'annual', 'returns', 'calculator'],
-        'url' => '/iposetu/tools/cagr-calculator.php',
+        'url' => '<?= BASE_URL ?>tools/cagr-calculator.php',
         'badge' => 'TOOL'
     ],
     [
         'title' => 'IPO Investment Calculator',
         'desc' => 'Estimate allotment amount, lot value, and requirement',
         'keywords' => ['ipo', 'calculator', 'investment', 'lot', 'shares', 'margin'],
-        'url' => '/iposetu/tools/ipo-calculator.php',
+        'url' => '<?= BASE_URL ?>tools/ipo-calculator.php',
         'badge' => 'TOOL'
     ],
     [
         'title' => 'Listing Gain Calculator',
         'desc' => 'Forecast estimated profit based on expected listing price and GMP',
         'keywords' => ['listing', 'gain', 'profit', 'gmp', 'grey market', 'calculator'],
-        'url' => '/iposetu/tools/listing-gain-calculator.php',
+        'url' => '<?= BASE_URL ?>tools/listing-gain-calculator.php',
         'badge' => 'TOOL'
     ],
     [
         'title' => 'Brokerage Calculator',
         'desc' => 'Calculate stamp duty, STT, exchange fees, and net brokerage',
         'keywords' => ['brokerage', 'charges', 'stt', 'tax', 'calculator', 'trading'],
-        'url' => '/iposetu/tools/brokerage-calculator.php',
+        'url' => '<?= BASE_URL ?>tools/brokerage-calculator.php',
         'badge' => 'TOOL'
     ]
 ];
@@ -140,37 +140,37 @@ $pagesCatalog = [
         'title' => 'IPO Calendar',
         'desc' => 'Upcoming IPO issue opening, closing, and listing dates',
         'keywords' => ['calendar', 'dates', 'schedule', 'timeline'],
-        'url' => '/iposetu/calendar/'
+        'url' => '<?= BASE_URL ?>calendar/'
     ],
     [
         'title' => 'Current Mainboard IPOs',
         'desc' => 'Live and active Mainboard IPOs accepting bids',
         'keywords' => ['current', 'active', 'live ipo', 'open ipo'],
-        'url' => '/iposetu/ipo/current'
+        'url' => '<?= BASE_URL ?>ipo/current'
     ],
     [
         'title' => 'Upcoming IPOs',
         'desc' => 'Forthcoming issues in the pipeline awaiting opening',
         'keywords' => ['upcoming', 'future', 'pipeline', 'sebi approved'],
-        'url' => '/iposetu/ipo/upcoming'
+        'url' => '<?= BASE_URL ?>ipo/upcoming'
     ],
     [
         'title' => 'SME IPO Directory',
         'desc' => 'Small and Medium Enterprise IPO tracking and updates',
         'keywords' => ['sme', 'nse emerge', 'bse sme', 'sme ipo'],
-        'url' => '/iposetu/sme/'
+        'url' => '<?= BASE_URL ?>sme/'
     ],
     [
         'title' => 'IPO Learning Center',
         'desc' => 'Beginner guides, ASBA, GMP explanation, and FAQs',
         'keywords' => ['learn', 'guide', 'faq', 'asba', 'tutorial', 'basics'],
-        'url' => '/iposetu/learn/'
+        'url' => '<?= BASE_URL ?>learn/'
     ],
     [
         'title' => 'Market & IPO News',
         'desc' => 'Real-time financial markets and IPO news stream',
         'keywords' => ['news', 'market updates', 'headlines'],
-        'url' => '/iposetu/news/'
+        'url' => '<?= BASE_URL ?>news/'
     ]
 ];
 
@@ -212,7 +212,7 @@ if (file_exists($newsCacheFile)) {
                         'title' => $title,
                         'subtitle' => !empty($summary) ? mb_strimwidth($summary, 0, 75, '...') : 'Financial Market News',
                         'badge' => 'NEWS',
-                        'url' => '/iposetu/news/',
+                        'url' => '<?= BASE_URL ?>news/',
                         'category' => 'News'
                     ];
                     $newsCount++;

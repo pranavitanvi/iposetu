@@ -10,8 +10,8 @@ require_once __DIR__ . '/includes/seo_helper.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 – Track IPOs &amp; Market Intelligence | IPOSETU</title>
     <meta name="description" content="Comprehensive financial information, real-time analytics, and investment tracking for 404 on IPOSETU."/>
-    <link rel="stylesheet" href="/iposetu/assets/css/style.css?v=7.4">
-    <link rel="stylesheet" href="/iposetu/assets/css/responsive.css?v=2.0">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/style.css?v=7.4">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/responsive.css?v=2.0">
     <?php 
     echo iposetu_render_head_seo([
         'title' => 'Page Not Found (404) | IPOSETU',
@@ -96,7 +96,7 @@ require_once __DIR__ . '/includes/seo_helper.php';
 </head>
 <body>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/header.php'; ?>
 
 <main class="error-404-hero">
     <div class="container">
@@ -107,32 +107,32 @@ require_once __DIR__ . '/includes/seo_helper.php';
         </p>
 
         <div class="error-links-grid">
-            <a href="/iposetu/" class="error-link-card">
+            <a href="<?= BASE_URL ?>" class="error-link-card">
                 <div class="error-link-icon">🏠</div>
                 <div class="error-link-title">Homepage</div>
                 <div class="error-link-desc">Return to the market overview and main dashboard</div>
             </a>
-            <a href="/iposetu/ipo/current" class="error-link-card">
+            <a href="<?= BASE_URL ?>ipo/current" class="error-link-card">
                 <div class="error-link-icon">📈</div>
                 <div class="error-link-title">Current IPOs</div>
                 <div class="error-link-desc">Explore active Mainboard IPOs accepting bids</div>
             </a>
-            <a href="/iposetu/calendar/" class="error-link-card">
+            <a href="<?= BASE_URL ?>calendar/" class="error-link-card">
                 <div class="error-link-icon">📅</div>
                 <div class="error-link-title">IPO Calendar</div>
                 <div class="error-link-desc">Track opening, closing, and allotment dates</div>
             </a>
-            <a href="/iposetu/allotment.php" class="error-link-card">
+            <a href="<?= BASE_URL ?>allotment.php" class="error-link-card">
                 <div class="error-link-icon">🔍</div>
                 <div class="error-link-title">Allotment Status</div>
                 <div class="error-link-desc">Check your share allotment status online</div>
             </a>
-            <a href="/iposetu/tools/sip-calculator.php" class="error-link-card">
+            <a href="<?= BASE_URL ?>tools/sip-calculator.php" class="error-link-card">
                 <div class="error-link-icon">🧮</div>
                 <div class="error-link-title">SIP Calculator</div>
                 <div class="error-link-desc">Forecast compounding returns on your investments</div>
             </a>
-            <a href="/iposetu/news/" class="error-link-card">
+            <a href="<?= BASE_URL ?>news/" class="error-link-card">
                 <div class="error-link-icon">📰</div>
                 <div class="error-link-title">Market News</div>
                 <div class="error-link-desc">Latest financial news and corporate developments</div>
@@ -141,7 +141,7 @@ require_once __DIR__ . '/includes/seo_helper.php';
     </div>
 </main>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/footer.php'; ?>
 
 </body>
 </html>

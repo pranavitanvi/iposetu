@@ -7,15 +7,15 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Best For Beginners Review 2026 – Brokerage Charges, App &amp; IPO Bidding | IPOSETU</title>
 <meta name="description" content="Complete review of Best For Beginners in India. Check account opening fees, trading charges, margin features, and one-click IPO application tools."/>
-<link class="style-link" href="/iposetu/assets/css/style.css?v=6.9" rel="stylesheet"/>
-<link href="/iposetu/assets/css/responsive.css?v=2.0" rel="stylesheet"/>
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/seo_helper.php'; echo iposetu_render_head_seo(); ?>
+<link class="style-link" href="<?= BASE_URL ?>assets/css/style.css?v=6.9" rel="stylesheet"/>
+<link href="<?= BASE_URL ?>assets/css/responsive.css?v=2.0" rel="stylesheet"/>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/seo_helper.php'; echo iposetu_render_head_seo(); ?>
 </head>
 <body>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/header.php'; ?>
     <div class="container" style="padding: 24px; margin-top: 20px; border-bottom: 1px solid var(--border-color); margin-bottom: 30px;">
         <div style="font-size: 12px; font-weight: 600; color: #64748b; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">
-            <a href="/iposetu/brokers/" style="color: inherit; text-decoration: none;">Brokers</a> / <span style="color: var(--primary-color);">For Beginners</span>
+            <a href="<?= BASE_URL ?>brokers/" style="color: inherit; text-decoration: none;">Brokers</a> / <span style="color: var(--primary-color);">For Beginners</span>
         </div>
         <h1 style="font-size: 32px; font-weight: 800; color: #0f172a; margin-bottom: 12px; letter-spacing: -0.5px;">START YOUR INVESTING JOURNEY</h1>
         <p style="font-size: 16px; color: #475569; max-width: 800px; line-height: 1.6;">Follow this 3-step guide to choose the safest, easiest, and cheapest broker for your first investment.</p>
@@ -50,7 +50,7 @@
                 <div style="flex: 1;">
                     <h3 style="font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 4px;">Groww</h3>
                     <p style="font-size: 14px; color: #475569; margin-bottom: 16px;">Best UI for beginners. Zero AMC.</p>
-                    <a href="/iposetu/brokers/groww" style="color: #2563eb; font-weight: 700; font-size: 14px; text-decoration: none;">View Profile  →</a>
+                    <a href="<?= BASE_URL ?>brokers/groww" style="color: #2563eb; font-weight: 700; font-size: 14px; text-decoration: none;">View Profile  →</a>
                 </div>
             </div>
             <div style="background: white; border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; display: flex; gap: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
@@ -58,18 +58,18 @@
                 <div style="flex: 1;">
                     <h3 style="font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 4px;">Zerodha</h3>
                     <p style="font-size: 14px; color: #475569; margin-bottom: 16px;">Best educational resources (Varsity).</p>
-                    <a href="/iposetu/brokers/zerodha" style="color: #2563eb; font-weight: 700; font-size: 14px; text-decoration: none;">View Profile  →</a>
+                    <a href="<?= BASE_URL ?>brokers/zerodha" style="color: #2563eb; font-weight: 700; font-size: 14px; text-decoration: none;">View Profile  →</a>
                 </div>
             </div>
         </div>
 
     </main>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/footer.php'; ?>
 
 <div id="sticky-bottom-ad-container"></div>
-<script src="/iposetu/assets/js/components.js?v=6.1"></script>
-<script src="/iposetu/assets/js/ad-manager.js?v=1.2"></script>
-<script src="/iposetu/assets/js/main.js"></script>
+<script src="<?= BASE_URL ?>assets/js/components.js?v=6.1"></script>
+<script src="<?= BASE_URL ?>assets/js/ad-manager.js?v=1.2"></script>
+<script src="<?= BASE_URL ?>assets/js/main.js"></script>
 </body>
 </html>

@@ -6,9 +6,9 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Current SME IPOs in India – Live SME IPO Issues | IPOSETU</title>
 <meta name="description" content="Track live open SME IPOs currently accepting bids on NSE Emerge and BSE SME platforms with real-time subscription and GMP tracking."/>
-<link class="style-link" href="/iposetu/assets/css/style.css?v=6.9" rel="stylesheet"/>
-<link href="/iposetu/assets/css/responsive.css?v=2.0" rel="stylesheet"/>
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/seo_helper.php'; echo iposetu_render_head_seo(); ?>
+<link class="style-link" href="<?= BASE_URL ?>assets/css/style.css?v=6.9" rel="stylesheet"/>
+<link href="<?= BASE_URL ?>assets/css/responsive.css?v=2.0" rel="stylesheet"/>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/seo_helper.php'; echo iposetu_render_head_seo(); ?>
 <style>
     .animated-card {
         background: white;
@@ -56,7 +56,7 @@
 </style>
 </head>
 <body>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/header.php'; ?>
 
 <div class="sme-hero-wrapper" style="background: linear-gradient(135deg, #0f172a 0%, #2e1065 100%); padding: 60px 0; border-bottom: 1px solid #4c1d95; margin-bottom: 40px;">
     <div class="container">
@@ -123,15 +123,15 @@
 </section>
 
 <!-- Footer -->
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/footer.php'; ?>
-<script src="/iposetu/assets/js/components.js?v=6.2"></script>
-<script src="/iposetu/assets/js/main.js"></script>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/footer.php'; ?>
+<script src="<?= BASE_URL ?>assets/js/components.js?v=6.2"></script>
+<script src="<?= BASE_URL ?>assets/js/main.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const gridContainer = document.getElementById("sme-current-grid");
     if (!gridContainer) return;
     
-    fetch('/iposetu/api/get_ipos.php?type=sme&status=open')
+    fetch('<?= BASE_URL ?>api/get_ipos.php?type=sme&status=open')
         .then(res => res.json())
         .then(data => {
             if (data.status !== 'success' || !data.data) {

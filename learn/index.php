@@ -6,8 +6,8 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Learning Center – Master IPOs, Stock Markets & Mutual Funds | IPOSETU</title>
 <meta name="description" content="Master stock markets, Initial Public Offerings (IPOs), ASBA, GMP, and Mutual Funds with comprehensive, beginner-to-advanced guides from IPOSETU."/>
-<link class="style-link" href="/iposetu/assets/css/style.css?v=6.9" rel="stylesheet"/>
-<link href="/iposetu/assets/css/responsive.css?v=2.0" rel="stylesheet"/>
+<link class="style-link" href="<?= BASE_URL ?>assets/css/style.css?v=6.9" rel="stylesheet"/>
+<link href="<?= BASE_URL ?>assets/css/responsive.css?v=2.0" rel="stylesheet"/>
 <style>
     .learn-hub-card {
         background: white;
@@ -74,7 +74,7 @@
 </style>
 </head>
 <body>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/header.php'; ?>
 
 <main class="container" style="padding-top: 24px; padding-bottom: 60px;">
 
@@ -113,7 +113,7 @@
     <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 24px; margin-bottom: 56px;" id="guides-grid">
         
         <!-- 1. IPO Guide -->
-        <a href="/iposetu/learn/ipo-guide.php" class="learn-hub-card" data-track="ipo">
+        <a href="<?= BASE_URL ?>learn/ipo-guide.php" class="learn-hub-card" data-track="ipo">
             <div>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
                     <span class="track-badge badge-ipo">IPO Masterclass</span>
@@ -134,7 +134,7 @@
         </a>
 
         <!-- 2. How to Apply -->
-        <a href="/iposetu/learn/how-to-apply-ipo.php" class="learn-hub-card" data-track="ipo">
+        <a href="<?= BASE_URL ?>learn/how-to-apply-ipo.php" class="learn-hub-card" data-track="ipo">
             <div>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
                     <span class="track-badge badge-ipo">IPO Masterclass</span>
@@ -155,7 +155,7 @@
         </a>
 
         <!-- 3. What is ASBA -->
-        <a href="/iposetu/learn/asba.php" class="learn-hub-card" data-track="ipo">
+        <a href="<?= BASE_URL ?>learn/asba.php" class="learn-hub-card" data-track="ipo">
             <div>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
                     <span class="track-badge badge-ipo">IPO Masterclass</span>
@@ -176,7 +176,7 @@
         </a>
 
         <!-- 4. Understanding GMP -->
-        <a href="/iposetu/learn/gmp.php" class="learn-hub-card" data-track="ipo">
+        <a href="<?= BASE_URL ?>learn/gmp.php" class="learn-hub-card" data-track="ipo">
             <div>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
                     <span class="track-badge badge-ipo">IPO Masterclass</span>
@@ -197,7 +197,7 @@
         </a>
 
         <!-- 5. IPO FAQs -->
-        <a href="/iposetu/learn/ipo-faqs.php" class="learn-hub-card" data-track="ipo">
+        <a href="<?= BASE_URL ?>learn/ipo-faqs.php" class="learn-hub-card" data-track="ipo">
             <div>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
                     <span class="track-badge badge-ipo">IPO Masterclass</span>
@@ -218,7 +218,7 @@
         </a>
 
         <!-- 6. Stock Market Basics -->
-        <a href="/iposetu/learn/stock-market-guide.php" class="learn-hub-card" data-track="market">
+        <a href="<?= BASE_URL ?>learn/stock-market-guide.php" class="learn-hub-card" data-track="market">
             <div>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
                     <span class="track-badge badge-market">Stock Markets</span>
@@ -239,7 +239,7 @@
         </a>
 
         <!-- 7. Understanding Risk -->
-        <a href="/iposetu/learn/understanding-risk.php" class="learn-hub-card" data-track="market">
+        <a href="<?= BASE_URL ?>learn/understanding-risk.php" class="learn-hub-card" data-track="market">
             <div>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
                     <span class="track-badge badge-market">Stock Markets</span>
@@ -260,7 +260,7 @@
         </a>
 
         <!-- 8. Glossary -->
-        <a href="/iposetu/learn/glossary.php" class="learn-hub-card" data-track="market">
+        <a href="<?= BASE_URL ?>learn/glossary.php" class="learn-hub-card" data-track="market">
             <div>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
                     <span class="track-badge badge-market">Stock Markets</span>
@@ -281,7 +281,7 @@
         </a>
 
         <!-- 9. Mutual Funds 101 -->
-        <a href="/iposetu/learn/mutual-fund-guide.php" class="learn-hub-card" data-track="fund">
+        <a href="<?= BASE_URL ?>learn/mutual-fund-guide.php" class="learn-hub-card" data-track="fund">
             <div>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
                     <span class="track-badge badge-fund">Mutual Funds</span>
@@ -302,7 +302,7 @@
         </a>
 
         <!-- 10. SIP vs Lumpsum -->
-        <a href="/iposetu/learn/sip-vs-lumpsum.php" class="learn-hub-card" data-track="fund">
+        <a href="<?= BASE_URL ?>learn/sip-vs-lumpsum.php" class="learn-hub-card" data-track="fund">
             <div>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
                     <span class="track-badge badge-fund">Mutual Funds</span>
@@ -366,19 +366,19 @@
             <p style="font-size: 14.5px; color: #94a3b8; line-height: 1.6; margin: 0;">Explore live upcoming IPOs, monitor real-time Grey Market Premiums, and check current subscription numbers across Mainboard and SME exchanges.</p>
         </div>
         <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-            <a href="/iposetu/ipo/open.php" style="background: #2563eb; color: white; padding: 12px 22px; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none;">View Open IPOs →</a>
-            <a href="/iposetu/sme/upcoming.php" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; padding: 12px 22px; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none;">Upcoming SME IPOs →</a>
+            <a href="<?= BASE_URL ?>ipo/open.php" style="background: #2563eb; color: white; padding: 12px 22px; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none;">View Open IPOs →</a>
+            <a href="<?= BASE_URL ?>sme/upcoming.php" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; padding: 12px 22px; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none;">Upcoming SME IPOs →</a>
         </div>
     </div>
 
 </main>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/footer.php'; ?>
 
 <div id="sticky-bottom-ad-container"></div>
-<script src="/iposetu/assets/js/components.js?v=6.1"></script>
-<script src="/iposetu/assets/js/ad-manager.js?v=1.2"></script>
-<script src="/iposetu/assets/js/main.js"></script>
+<script src="<?= BASE_URL ?>assets/js/components.js?v=6.1"></script>
+<script src="<?= BASE_URL ?>assets/js/ad-manager.js?v=1.2"></script>
+<script src="<?= BASE_URL ?>assets/js/main.js"></script>
 <script>
 function filterTrack(track, btn) {
     document.querySelectorAll('#track-filters .filter-btn').forEach(b => b.classList.remove('active'));

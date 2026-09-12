@@ -20,3 +20,25 @@
 [2026-09-10 08:48:44] News sync SUCCESS
 [2026-09-10 08:48:44] === IPOSETU Daily Sync Completed ===
 [2026-09-10 08:48:44] 
+[2026-09-11 07:13:58] === IPOSETU Daily Sync Started ===
+[2026-09-11 07:13:58] Starting Upstox IPO sync...
+[2026-09-12 09:45:11] === IPOSETU Daily Sync Started ===
+[2026-09-12 09:45:11] Starting Upstox IPO sync...
+[2026-09-12 09:45:11] Starting Upstox IPO sync...
+[2026-09-12 09:45:11] === IPOSETU Daily Sync Started ===
+[2026-09-12 09:45:11] Starting Upstox IPO sync...
+[2026-09-12 09:46:01] IPO sync FAILED: List API Error (listed, sme, page 4): Too Many Request Sent
+[2026-09-12 09:46:01] Starting News sync...
+[2026-09-12 09:46:01] IPO sync FAILED: Detail API Error for diksha-polymers-limited-ipo: Too Many Request Sent; List API Error (listed, sme, page 4): Too Many Request Sent
+[2026-09-12 09:46:01] Starting News sync...
+[2026-09-12 09:46:02] News sync SUCCESS
+[2026-09-12 09:46:02] === IPOSETU Daily Sync Completed ===
+[2026-09-12 09:46:02] 
+[2026-09-12 09:46:02] News sync SUCCESS
+[2026-09-12 09:46:02] === IPOSETU Daily Sync Completed ===
+[2026-09-12 09:46:02] 
+[2026-09-12 09:46:03] IPO sync FAILED: Detail API Error for anubhav-plast-limited-ipo: Too Many Request Sent; Detail API Error for avience-biomedicals-limited-ipo: Too Many Request Sent; Detail API Error for leapfrog-engineering-services-limited: Too Many Request Sent; Detail API Error for liotech-industries-limited-ipo: Too Many Request Sent; Detail API Error for clay-craft-india-limited-ipo: Too Many Request Sent; Detail API Error for diksha-polymers-limited-ipo: Too Many Request Sent; List API Error (listed, sme, page 4): Too Many Request Sent
+[2026-09-12 09:46:03] Starting News sync...
+[2026-09-12 09:46:03] News sync SUCCESS
+[2026-09-12 09:46:03] === IPOSETU Daily Sync Completed ===
+[2026-09-12 09:46:03] 

@@ -7,11 +7,11 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Stock Market Guide – Track IPOs &amp; Market Intelligence | IPOSETU</title>
 <meta name="description" content="Comprehensive financial information, real-time analytics, and investment tracking for Stock Market Guide on IPOSETU."/>
-<link class="style-link" href="/iposetu/assets/css/style.css?v=6.9" rel="stylesheet"/>
-<link href="/iposetu/assets/css/responsive.css?v=2.0" rel="stylesheet"/>
+<link class="style-link" href="<?= BASE_URL ?>assets/css/style.css?v=6.9" rel="stylesheet"/>
+<link href="<?= BASE_URL ?>assets/css/responsive.css?v=2.0" rel="stylesheet"/>
 </head>
 <body>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/header.php'; ?>
 
 <main class="container">
 
@@ -84,11 +84,11 @@
         <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; position: sticky; top: 20px;">
             <h4 style="font-size: 16px; font-weight: 800; color: #0f172a; margin-bottom: 16px;">Related Guides</h4>
             <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
-                <li><a href="/iposetu/learn/ipo-guide.php" style="color: var(--accent-color); text-decoration: none; font-weight: 700;">Complete IPO Guide →</a></li>
-                <li><a href="/iposetu/learn/mutual-fund-guide.php" style="color: var(--accent-color); text-decoration: none; font-weight: 700;">Mutual Fund Guide →</a></li>
-                <li><a href="/iposetu/learn/understanding-risk.php" style="color: var(--accent-color); text-decoration: none; font-weight: 700;">Mastering Risk →</a></li>
-                <li><a href="/iposetu/learn/glossary.php" style="color: var(--accent-color); text-decoration: none; font-weight: 700;">Market Glossary →</a></li>
-                <li><a href="/iposetu/learn/index.php" style="color: #475569; text-decoration: none; font-weight: 700;">← Learning Hub</a></li>
+                <li><a href="<?= BASE_URL ?>learn/ipo-guide.php" style="color: var(--accent-color); text-decoration: none; font-weight: 700;">Complete IPO Guide →</a></li>
+                <li><a href="<?= BASE_URL ?>learn/mutual-fund-guide.php" style="color: var(--accent-color); text-decoration: none; font-weight: 700;">Mutual Fund Guide →</a></li>
+                <li><a href="<?= BASE_URL ?>learn/understanding-risk.php" style="color: var(--accent-color); text-decoration: none; font-weight: 700;">Mastering Risk →</a></li>
+                <li><a href="<?= BASE_URL ?>learn/glossary.php" style="color: var(--accent-color); text-decoration: none; font-weight: 700;">Market Glossary →</a></li>
+                <li><a href="<?= BASE_URL ?>learn/index.php" style="color: #475569; text-decoration: none; font-weight: 700;">← Learning Hub</a></li>
             </ul>
         </div>
     </aside>
@@ -97,11 +97,11 @@
 </main>
 
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/footer.php'; ?>
 
 <div id="sticky-bottom-ad-container"></div>
-<script src="/iposetu/assets/js/components.js?v=6.1"></script>
-<script src="/iposetu/assets/js/ad-manager.js?v=1.2"></script>
-<script src="/iposetu/assets/js/main.js"></script>
+<script src="<?= BASE_URL ?>assets/js/components.js?v=6.1"></script>
+<script src="<?= BASE_URL ?>assets/js/ad-manager.js?v=1.2"></script>
+<script src="<?= BASE_URL ?>assets/js/main.js"></script>
 </body>
 </html>

@@ -24,41 +24,41 @@
         <div class="footer-col" style="font-size: 13px;">
             <h4 style="font-size: 14px; margin-bottom: 20px;">MARKETS</h4>
             <ul style="line-height: 2;">
-                <li><a href="/iposetu/">IPO Dashboard</a></li>
-                <li><a href="/iposetu/ipo/upcoming">Upcoming IPOs</a></li>
-                <li><a href="/iposetu/calendar/">IPO Calendar</a></li>
-                <li><a href="/iposetu/learn/gmp">IPO GMP</a></li>
+                <li><a href="<?= BASE_URL ?>">IPO Dashboard</a></li>
+                <li><a href="<?= BASE_URL ?>ipo/upcoming">Upcoming IPOs</a></li>
+                <li><a href="<?= BASE_URL ?>calendar/">IPO Calendar</a></li>
+                <li><a href="<?= BASE_URL ?>learn/gmp">IPO GMP</a></li>
             </ul>
         </div>
 
         <div class="footer-col" style="font-size: 13px;">
             <h4 style="font-size: 14px; margin-bottom: 20px;">SME</h4>
             <ul style="line-height: 2;">
-                <li><a href="/iposetu/sme/dashboard">SME Dashboard</a></li>
-                <li><a href="/iposetu/sme/upcoming">SME Upcoming</a></li>
-                <li><a href="/iposetu/sme/gmp">SME GMP</a></li>
-                <li><a href="/iposetu/sme/guide">SME Guide</a></li>
+                <li><a href="<?= BASE_URL ?>sme/dashboard">SME Dashboard</a></li>
+                <li><a href="<?= BASE_URL ?>sme/upcoming">SME Upcoming</a></li>
+                <li><a href="<?= BASE_URL ?>sme/gmp">SME GMP</a></li>
+                <li><a href="<?= BASE_URL ?>sme/guide">SME Guide</a></li>
             </ul>
         </div>
         
         <div class="footer-col" style="font-size: 13px;">
             <h4 style="font-size: 14px; margin-bottom: 20px;">RESOURCES</h4>
             <ul style="line-height: 2;">
-                <li><a href="/iposetu/tools/ipo-calculator">IPO Calculator</a></li>
-                <li><a href="/iposetu/tools/cagr-calculator">Invest Calculator</a></li>
-                <li><a href="/iposetu/news/">News & Insights</a></li>
-                <li><a href="/iposetu/sme/faqs">FAQ</a></li>
+                <li><a href="<?= BASE_URL ?>tools/ipo-calculator">IPO Calculator</a></li>
+                <li><a href="<?= BASE_URL ?>tools/cagr-calculator">Invest Calculator</a></li>
+                <li><a href="<?= BASE_URL ?>news/">News & Insights</a></li>
+                <li><a href="<?= BASE_URL ?>sme/faqs">FAQ</a></li>
             </ul>
         </div>
         
         <div class="footer-col" style="font-size: 13px;">
             <h4 style="font-size: 14px; margin-bottom: 20px;">COMPANY</h4>
             <ul style="line-height: 2;">
-                <li><a href="/iposetu/about">About IPOSETU</a></li>
-                <li><a href="/iposetu/contact">Contact</a></li>
-                <li><a href="/iposetu/disclaimer">Disclaimer</a></li>
-                <li><a href="/iposetu/privacy-policy">Privacy Policy</a></li>
-                <li><a href="/iposetu/terms-and-conditions">Terms & Conditions</a></li>
+                <li><a href="<?= BASE_URL ?>about">About IPOSETU</a></li>
+                <li><a href="<?= BASE_URL ?>contact">Contact</a></li>
+                <li><a href="<?= BASE_URL ?>disclaimer">Disclaimer</a></li>
+                <li><a href="<?= BASE_URL ?>privacy-policy">Privacy Policy</a></li>
+                <li><a href="<?= BASE_URL ?>terms-and-conditions">Terms & Conditions</a></li>
             </ul>
         </div>
     </div>
@@ -88,15 +88,15 @@
     <div class="footer-bottom">
         <div>&copy; 2026 IPOSETU. All rights reserved.</div>
         <div class="footer-bottom-links">
-            <a href="/iposetu/privacy-policy">Privacy Policy</a>
-            <a href="/iposetu/terms-and-conditions">Terms & Conditions</a>
-            <a href="/iposetu/disclaimer">Disclaimer</a>
+            <a href="<?= BASE_URL ?>privacy-policy">Privacy Policy</a>
+            <a href="<?= BASE_URL ?>terms-and-conditions">Terms & Conditions</a>
+            <a href="<?= BASE_URL ?>disclaimer">Disclaimer</a>
         </div>
     </div>
 </footer>
 <!-- Position I: Sticky Bottom Ad Container -->
 <div id="sticky-bottom-ad-container"></div>
-<script src="/iposetu/assets/js/components.js?v=6.1"></script>
-<script src="/iposetu/assets/js/ad-manager.js?v=1.2"></script>
-<script src="/iposetu/assets/js/main.js"></script>
+<script src="<?= BASE_URL ?>assets/js/components.js?v=6.1"></script>
+<script src="<?= BASE_URL ?>assets/js/ad-manager.js?v=1.2"></script>
+<script src="<?= BASE_URL ?>assets/js/main.js"></script>
 

@@ -7,12 +7,12 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Sbi Balanced Advantage Fund NAV, Portfolio Holdings &amp; Returns | IPOSETU</title>
 <meta name="description" content="Analyze Sbi Balanced Advantage Fund performance, expense ratio, risk ratings, and fund manager details on IPOSETU."/>
-<link class="style-link" href="/iposetu/assets/css/style.css?v=6.9" rel="stylesheet"/>
-<link href="/iposetu/assets/css/responsive.css?v=2.0" rel="stylesheet"/>
-</meta><?php require_once $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/seo_helper.php'; echo iposetu_render_head_seo(); ?>
+<link class="style-link" href="<?= BASE_URL ?>assets/css/style.css?v=6.9" rel="stylesheet"/>
+<link href="<?= BASE_URL ?>assets/css/responsive.css?v=2.0" rel="stylesheet"/>
+</meta><?php require_once $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/seo_helper.php'; echo iposetu_render_head_seo(); ?>
 </head>
 <body>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/header.php'; ?>
 <style>
         @keyframes bgPan {
             0% { background-position: 0% 50%; }
@@ -151,9 +151,9 @@
 <div class="card anim-card delay-1" style="padding: 24px; border-radius: 16px; margin-bottom: 24px; border-top: 4px solid #3b82f6;">
 <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 16px; color: #0f172a;">Quick Links</h3>
 <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.4;">
-<li><a href="/iposetu/ipo/gmp" style="color: #0f172a; text-decoration: none; font-weight: 500; font-size: 14px; display: flex; justify-content: space-between;">Live GMP <span style="color: #3b82f6;">→</span></a></li>
-<li><a href="/iposetu/ipo/subscription" style="color: #0f172a; text-decoration: none; font-weight: 500; font-size: 14px; display: flex; justify-content: space-between;">Subscription Status <span style="color: #3b82f6;">→</span></a></li>
-<li><a href="/iposetu/ipo/allotment" style="color: #0f172a; text-decoration: none; font-weight: 500; font-size: 14px; display: flex; justify-content: space-between;">Allotment Details <span style="color: #3b82f6;">→</span></a></li>
+<li><a href="<?= BASE_URL ?>ipo/gmp" style="color: #0f172a; text-decoration: none; font-weight: 500; font-size: 14px; display: flex; justify-content: space-between;">Live GMP <span style="color: #3b82f6;">→</span></a></li>
+<li><a href="<?= BASE_URL ?>ipo/subscription" style="color: #0f172a; text-decoration: none; font-weight: 500; font-size: 14px; display: flex; justify-content: space-between;">Subscription Status <span style="color: #3b82f6;">→</span></a></li>
+<li><a href="<?= BASE_URL ?>ipo/allotment" style="color: #0f172a; text-decoration: none; font-weight: 500; font-size: 14px; display: flex; justify-content: space-between;">Allotment Details <span style="color: #3b82f6;">→</span></a></li>
 </ul>
 </div>
 <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 24px; text-align: center;">
@@ -165,10 +165,10 @@
 </aside>
 </main>
 <!-- Footer -->
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/footer.php'; ?>
 <div id="sticky-bottom-ad-container"></div>
-<script src="/iposetu/assets/js/components.js?v=6.1"></script>
-<script src="/iposetu/assets/js/ad-manager.js?v=1.2"></script>
-<script src="/iposetu/assets/js/main.js"></script>
+<script src="<?= BASE_URL ?>assets/js/components.js?v=6.1"></script>
+<script src="<?= BASE_URL ?>assets/js/ad-manager.js?v=1.2"></script>
+<script src="<?= BASE_URL ?>assets/js/main.js"></script>
 </body>
 </html>

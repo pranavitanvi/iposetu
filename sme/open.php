@@ -7,12 +7,12 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Open – Track IPOs &amp; Market Intelligence | IPOSETU</title>
 <meta name="description" content="Comprehensive financial information, real-time analytics, and investment tracking for Open on IPOSETU."/>
-<link class="style-link" href="/iposetu/assets/css/style.css?v=6.9" rel="stylesheet"/>
-<link href="/iposetu/assets/css/responsive.css?v=2.0" rel="stylesheet"/>
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/seo_helper.php'; echo iposetu_render_head_seo(); ?>
+<link class="style-link" href="<?= BASE_URL ?>assets/css/style.css?v=6.9" rel="stylesheet"/>
+<link href="<?= BASE_URL ?>assets/css/responsive.css?v=2.0" rel="stylesheet"/>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/seo_helper.php'; echo iposetu_render_head_seo(); ?>
 </head>
 <body>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/header.php'; ?>
 
 
 <style>
@@ -196,18 +196,18 @@
     </div>
 </section>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/footer.php'; ?>
 
 <div id="sticky-bottom-ad-container"></div>
-<script src="/iposetu/assets/js/components.js?v=6.1"></script>
-<script src="/iposetu/assets/js/ad-manager.js?v=1.2"></script>
-<script src="/iposetu/assets/js/main.js"></script>
+<script src="<?= BASE_URL ?>assets/js/components.js?v=6.1"></script>
+<script src="<?= BASE_URL ?>assets/js/ad-manager.js?v=1.2"></script>
+<script src="<?= BASE_URL ?>assets/js/main.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const grid = document.getElementById('sme-open-grid');
     if (!grid) return;
 
-    fetch('/iposetu/api/get_ipos.php?type=sme&status=open')
+    fetch('<?= BASE_URL ?>api/get_ipos.php?type=sme&status=open')
         .then(res => res.json())
         .then(data => {
             const ipos = (data.status === 'success' && data.data) ? data.data : [];
@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let html = '';
             ipos.forEach(ipo => {
                 const slug = ipo.slug || (ipo.symbol ? ipo.symbol.toLowerCase() : '#');
-                const url = '/iposetu/sme/' + slug;
+                const url = '<?= BASE_URL ?>sme/' + slug;
                 const priceBand = ipo.price_band || (ipo.minimum_price && ipo.maximum_price ? ('₹' + ipo.minimum_price + ' - ₹' + ipo.maximum_price) : (ipo.issue_price ? '₹' + ipo.issue_price : '--'));
                 const lotSize = ipo.lot_size ? ipo.lot_size + ' Shares' : '--';
                 const issueSize = ipo.issue_size ? '₹' + ipo.issue_size + ' Cr' : '--';

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analysis Share Price, Financials, Ratio &amp; Analysis | IPOSETU</title>
-    <link class="style-link" href="/iposetu/assets/css/style.css?v=7.1" rel="stylesheet"/>
-    <link href="/iposetu/assets/css/responsive.css?v=2.0" rel="stylesheet"/>
+    <link class="style-link" href="<?= BASE_URL ?>assets/css/style.css?v=7.1" rel="stylesheet"/>
+    <link href="<?= BASE_URL ?>assets/css/responsive.css?v=2.0" rel="stylesheet"/>
     
     <!-- TradingView Lightweight Charts -->
     <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
@@ -124,7 +124,7 @@
             background: #f8fafc;
         }
     </style>
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/seo_helper.php'; echo iposetu_render_head_seo(); ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/seo_helper.php'; echo iposetu_render_head_seo(); ?>
 </head>
 <body>
 
@@ -169,7 +169,7 @@
     </div>
 </div>
 
-<script src="/iposetu/assets/js/stock-chart.js?v=13"></script>
+<script src="<?= BASE_URL ?>assets/js/stock-chart.js?v=13"></script>
 </body>
 </html>
 

@@ -7,12 +7,12 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Brokers – Track IPOs &amp; Market Intelligence | IPOSETU</title>
 <meta name="description" content="Comprehensive financial information, real-time analytics, and investment tracking for Brokers on IPOSETU."/>
-<link class="style-link" href="/iposetu/assets/css/style.css?v=6.9" rel="stylesheet"/>
-<link href="/iposetu/assets/css/responsive.css?v=2.0" rel="stylesheet"/>
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/seo_helper.php'; echo iposetu_render_head_seo(); ?>
+<link class="style-link" href="<?= BASE_URL ?>assets/css/style.css?v=6.9" rel="stylesheet"/>
+<link href="<?= BASE_URL ?>assets/css/responsive.css?v=2.0" rel="stylesheet"/>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/seo_helper.php'; echo iposetu_render_head_seo(); ?>
 </head>
 <body>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/header.php'; ?>
     <!-- HERO SECTION & MATCHMAKER -->
     <div class="container">
         <div class="broker-hero">
@@ -83,7 +83,7 @@
                         Extremely Simple UI
                     </div>
                 </div>
-                <a href="/iposetu/brokers/groww" class="btn btn-outline" style="display:block; text-align:center; padding:10px; border-radius:8px; font-weight:700; text-decoration:none; margin-top: auto;">Read Review</a>
+                <a href="<?= BASE_URL ?>brokers/groww" class="btn btn-outline" style="display:block; text-align:center; padding:10px; border-radius:8px; font-weight:700; text-decoration:none; margin-top: auto;">Read Review</a>
             </div>
             
             <div class="pick-card options">
@@ -105,7 +105,7 @@
                         Margin Trading Facility
                     </div>
                 </div>
-                <a href="/iposetu/brokers/upstox" class="btn btn-outline" style="display:block; text-align:center; padding:10px; border-radius:8px; font-weight:700; text-decoration:none;">Read Review</a>
+                <a href="<?= BASE_URL ?>brokers/upstox" class="btn btn-outline" style="display:block; text-align:center; padding:10px; border-radius:8px; font-weight:700; text-decoration:none;">Read Review</a>
             </div>
         </div>
     </div>
@@ -135,7 +135,7 @@
                                     <div class="broker-name-cell">
                                         <div class="broker-icon b-icon-z">Z</div>
                                         <div>
-                                            <a href="/iposetu/brokers/zerodha" class="broker-name">Zerodha</a><br>
+                                            <a href="<?= BASE_URL ?>brokers/zerodha" class="broker-name">Zerodha</a><br>
                                             <span class="broker-type-badge">Discount</span>
                                         </div>
                                     </div>
@@ -145,7 +145,7 @@
                                 <td><span class="fee-free">Free</span></td>
                                 <td><span class="fee-num">₹20/order</span></td>
                                 <td style="text-align: right;">
-                                    <a href="/iposetu/brokers/zerodha" class="btn-review">
+                                    <a href="<?= BASE_URL ?>brokers/zerodha" class="btn-review">
                                         Review <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                                     </a>
                                 </td>
@@ -155,7 +155,7 @@
                                     <div class="broker-name-cell">
                                         <div class="broker-icon b-icon-g">G</div>
                                         <div>
-                                            <a href="/iposetu/brokers/groww" class="broker-name">Groww</a><br>
+                                            <a href="<?= BASE_URL ?>brokers/groww" class="broker-name">Groww</a><br>
                                             <span class="broker-type-badge">Discount</span>
                                         </div>
                                     </div>
@@ -165,7 +165,7 @@
                                 <td><span class="fee-num">₹20/order</span></td>
                                 <td><span class="fee-num">₹20/order</span></td>
                                 <td style="text-align: right;">
-                                    <a href="/iposetu/brokers/groww" class="btn-review">
+                                    <a href="<?= BASE_URL ?>brokers/groww" class="btn-review">
                                         Review <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                                     </a>
                                 </td>
@@ -175,7 +175,7 @@
                                     <div class="broker-name-cell">
                                         <div class="broker-icon b-icon-u">U</div>
                                         <div>
-                                            <a href="/iposetu/brokers/upstox" class="broker-name">Upstox</a><br>
+                                            <a href="<?= BASE_URL ?>brokers/upstox" class="broker-name">Upstox</a><br>
                                             <span class="broker-type-badge">Discount</span>
                                         </div>
                                     </div>
@@ -185,7 +185,7 @@
                                 <td><span class="fee-num">₹20/order</span></td>
                                 <td><span class="fee-num">₹20/order</span></td>
                                 <td style="text-align: right;">
-                                    <a href="/iposetu/brokers/upstox" class="btn-review">
+                                    <a href="<?= BASE_URL ?>brokers/upstox" class="btn-review">
                                         Review <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                                     </a>
                                 </td>
@@ -195,7 +195,7 @@
                                     <div class="broker-name-cell">
                                         <div class="broker-icon b-icon-a">A</div>
                                         <div>
-                                            <a href="/iposetu/brokers/angel-one" class="broker-name">Angel One</a><br>
+                                            <a href="<?= BASE_URL ?>brokers/angel-one" class="broker-name">Angel One</a><br>
                                             <span class="broker-type-badge">Full Service</span>
                                         </div>
                                     </div>
@@ -205,7 +205,7 @@
                                 <td><span class="fee-free">Free</span></td>
                                 <td><span class="fee-num">₹20/order</span></td>
                                 <td style="text-align: right;">
-                                    <a href="/iposetu/brokers/angel-one" class="btn-review">
+                                    <a href="<?= BASE_URL ?>brokers/angel-one" class="btn-review">
                                         Review <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                                     </a>
                                 </td>
@@ -215,7 +215,7 @@
                                     <div class="broker-name-cell">
                                         <div class="broker-icon b-icon-p">P</div>
                                         <div>
-                                            <a href="/iposetu/brokers/prostocks" class="broker-name">ProStocks</a><br>
+                                            <a href="<?= BASE_URL ?>brokers/prostocks" class="broker-name">ProStocks</a><br>
                                             <span class="broker-type-badge">Discount</span>
                                         </div>
                                     </div>
@@ -225,7 +225,7 @@
                                 <td><span class="fee-free">Free</span></td>
                                 <td><span class="fee-num">₹15/order</span></td>
                                 <td style="text-align: right;">
-                                    <a href="/iposetu/brokers/prostocks" class="btn-review">
+                                    <a href="<?= BASE_URL ?>brokers/prostocks" class="btn-review">
                                         Review <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                                     </a>
                                 </td>
@@ -271,11 +271,11 @@
         </div>
     </main>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/footer.php'; ?>
 
 <div id="sticky-bottom-ad-container"></div>
-<script src="/iposetu/assets/js/components.js?v=6.1"></script>
-<script src="/iposetu/assets/js/ad-manager.js?v=1.2"></script>
-<script src="/iposetu/assets/js/main.js"></script>
+<script src="<?= BASE_URL ?>assets/js/components.js?v=6.1"></script>
+<script src="<?= BASE_URL ?>assets/js/ad-manager.js?v=1.2"></script>
+<script src="<?= BASE_URL ?>assets/js/main.js"></script>
 </body>
 </html>

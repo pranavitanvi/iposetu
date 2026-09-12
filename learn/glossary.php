@@ -6,8 +6,8 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Financial &amp; IPO Glossary – Investment Terms Demystified | IPOSETU</title>
 <meta name="description" content="Explore clear, jargon-free definitions for key financial, stock market, and IPO terms including ASBA, GMP, Cut-Off Price, P/E ratio, and NAV."/>
-<link class="style-link" href="/iposetu/assets/css/style.css?v=6.9" rel="stylesheet"/>
-<link href="/iposetu/assets/css/responsive.css?v=2.0" rel="stylesheet"/>
+<link class="style-link" href="<?= BASE_URL ?>assets/css/style.css?v=6.9" rel="stylesheet"/>
+<link href="<?= BASE_URL ?>assets/css/responsive.css?v=2.0" rel="stylesheet"/>
 <style>
     .glossary-card {
         background: white;
@@ -27,7 +27,7 @@
 </style>
 </head>
 <body>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/header.php'; ?>
 
 <main class="container" style="padding-top: 24px; padding-bottom: 60px;">
 
@@ -50,7 +50,7 @@
             <div style="font-size: 12px; font-weight: 700; color: #2563eb; margin-bottom: 10px; text-transform: uppercase;">Application Supported by Blocked Amount</div>
             <p style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 16px;">A mandatory process where your bank creates a temporary block (lien) on your bid money. Funds are debited only if shares are allotted to you.</p>
         </div>
-        <a href="/iposetu/learn/asba.php" style="font-size: 13px; font-weight: 700; color: #2563eb; text-decoration: none;">Read Guide →</a>
+        <a href="<?= BASE_URL ?>learn/asba.php" style="font-size: 13px; font-weight: 700; color: #2563eb; text-decoration: none;">Read Guide →</a>
     </div>
 
     <div class="glossary-card" data-term="gmp grey market premium">
@@ -59,7 +59,7 @@
             <div style="font-size: 12px; font-weight: 700; color: #2563eb; margin-bottom: 10px; text-transform: uppercase;">Grey Market Premium</div>
             <p style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 16px;">The unofficial premium over and above the issue price at which IPO shares trade before being formally listed on stock exchanges.</p>
         </div>
-        <a href="/iposetu/learn/gmp.php" style="font-size: 13px; font-weight: 700; color: #2563eb; text-decoration: none;">Read Guide →</a>
+        <a href="<?= BASE_URL ?>learn/gmp.php" style="font-size: 13px; font-weight: 700; color: #2563eb; text-decoration: none;">Read Guide →</a>
     </div>
 
     <div class="glossary-card" data-term="demat account dematerialised">
@@ -68,7 +68,7 @@
             <div style="font-size: 12px; font-weight: 700; color: #059669; margin-bottom: 10px; text-transform: uppercase;">Dematerialised Account</div>
             <p style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 16px;">An electronic locker maintained by depositories (NSDL or CDSL) to store your securities, shares, and ETF units in digital form.</p>
         </div>
-        <a href="/iposetu/learn/stock-market-guide.php" style="font-size: 13px; font-weight: 700; color: #059669; text-decoration: none;">Read Guide →</a>
+        <a href="<?= BASE_URL ?>learn/stock-market-guide.php" style="font-size: 13px; font-weight: 700; color: #059669; text-decoration: none;">Read Guide →</a>
     </div>
 
     <div class="glossary-card" data-term="cut-off price cutoff bidding">
@@ -77,7 +77,7 @@
             <div style="font-size: 12px; font-weight: 700; color: #2563eb; margin-bottom: 10px; text-transform: uppercase;">Final Issue Price Option</div>
             <p style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 16px;">A bidding option in book-built IPOs allowing retail applicants to agree to purchase shares at whatever final price the company discovers.</p>
         </div>
-        <a href="/iposetu/learn/how-to-apply-ipo.php" style="font-size: 13px; font-weight: 700; color: #2563eb; text-decoration: none;">Read Guide →</a>
+        <a href="<?= BASE_URL ?>learn/how-to-apply-ipo.php" style="font-size: 13px; font-weight: 700; color: #2563eb; text-decoration: none;">Read Guide →</a>
     </div>
 
     <div class="glossary-card" data-term="drhp red herring prospectus">
@@ -86,7 +86,7 @@
             <div style="font-size: 12px; font-weight: 700; color: #2563eb; margin-bottom: 10px; text-transform: uppercase;">Draft Red Herring Prospectus</div>
             <p style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 16px;">The official regulatory document submitted to SEBI containing detailed company disclosures, past financials, risk factors, and promoter records.</p>
         </div>
-        <a href="/iposetu/learn/ipo-guide.php" style="font-size: 13px; font-weight: 700; color: #2563eb; text-decoration: none;">Read Guide →</a>
+        <a href="<?= BASE_URL ?>learn/ipo-guide.php" style="font-size: 13px; font-weight: 700; color: #2563eb; text-decoration: none;">Read Guide →</a>
     </div>
 
     <div class="glossary-card" data-term="aum assets under management">
@@ -95,7 +95,7 @@
             <div style="font-size: 12px; font-weight: 700; color: #7c3aed; margin-bottom: 10px; text-transform: uppercase;">Assets Under Management</div>
             <p style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 16px;">The total market value of all investments and client capital that an Asset Management Company (AMC) or mutual fund manages.</p>
         </div>
-        <a href="/iposetu/learn/mutual-fund-guide.php" style="font-size: 13px; font-weight: 700; color: #7c3aed; text-decoration: none;">Read Guide →</a>
+        <a href="<?= BASE_URL ?>learn/mutual-fund-guide.php" style="font-size: 13px; font-weight: 700; color: #7c3aed; text-decoration: none;">Read Guide →</a>
     </div>
 
     <div class="glossary-card" data-term="sip systematic investment plan">
@@ -104,7 +104,7 @@
             <div style="font-size: 12px; font-weight: 700; color: #7c3aed; margin-bottom: 10px; text-transform: uppercase;">Systematic Investment Plan</div>
             <p style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 16px;">An automated investment mechanism allowing you to invest a fixed sum at recurring calendar intervals to benefit from rupee cost averaging.</p>
         </div>
-        <a href="/iposetu/learn/sip-vs-lumpsum.php" style="font-size: 13px; font-weight: 700; color: #7c3aed; text-decoration: none;">Read Guide →</a>
+        <a href="<?= BASE_URL ?>learn/sip-vs-lumpsum.php" style="font-size: 13px; font-weight: 700; color: #7c3aed; text-decoration: none;">Read Guide →</a>
     </div>
 
     <div class="glossary-card" data-term="cagr compound annual growth rate">
@@ -113,7 +113,7 @@
             <div style="font-size: 12px; font-weight: 700; color: #059669; margin-bottom: 10px; text-transform: uppercase;">Compound Annual Growth Rate</div>
             <p style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 16px;">The geometric progression ratio that provides a constant annual rate of return over a multi-year investment compounding horizon.</p>
         </div>
-        <a href="/iposetu/learn/stock-market-guide.php" style="font-size: 13px; font-weight: 700; color: #059669; text-decoration: none;">Read Guide →</a>
+        <a href="<?= BASE_URL ?>learn/stock-market-guide.php" style="font-size: 13px; font-weight: 700; color: #059669; text-decoration: none;">Read Guide →</a>
     </div>
 
     <div class="glossary-card" data-term="nav net asset value">
@@ -122,19 +122,19 @@
             <div style="font-size: 12px; font-weight: 700; color: #7c3aed; margin-bottom: 10px; text-transform: uppercase;">Net Asset Value</div>
             <p style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 16px;">The market value per unit of a mutual fund scheme, calculated by subtracting liabilities from assets and dividing by outstanding units.</p>
         </div>
-        <a href="/iposetu/learn/mutual-fund-guide.php" style="font-size: 13px; font-weight: 700; color: #7c3aed; text-decoration: none;">Read Guide →</a>
+        <a href="<?= BASE_URL ?>learn/mutual-fund-guide.php" style="font-size: 13px; font-weight: 700; color: #7c3aed; text-decoration: none;">Read Guide →</a>
     </div>
 
 </div>
 
 </main>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/footer.php'; ?>
 
 <div id="sticky-bottom-ad-container"></div>
-<script src="/iposetu/assets/js/components.js?v=6.1"></script>
-<script src="/iposetu/assets/js/ad-manager.js?v=1.2"></script>
-<script src="/iposetu/assets/js/main.js"></script>
+<script src="<?= BASE_URL ?>assets/js/components.js?v=6.1"></script>
+<script src="<?= BASE_URL ?>assets/js/ad-manager.js?v=1.2"></script>
+<script src="<?= BASE_URL ?>assets/js/main.js"></script>
 <script>
 function filterGlossary() {
     const q = document.getElementById('glossary-search').value.toLowerCase();

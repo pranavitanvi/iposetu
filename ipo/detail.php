@@ -92,8 +92,8 @@ $productSchema = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail – Track IPOs &amp; Market Intelligence | IPOSETU</title>
     <meta name="description" content="Comprehensive financial information, real-time analytics, and investment tracking for Detail on IPOSETU."/>
-    <link rel="stylesheet" href="/iposetu/assets/css/style.css?v=7.4">
-    <link rel="stylesheet" href="/iposetu/assets/css/responsive.css?v=2.0">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/style.css?v=7.4">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/responsive.css?v=2.0">
     
     <!-- SEO Helper: Canonical Tag, Open Graph, Twitter Cards & Structured Data Schema -->
     <?php echo iposetu_render_head_seo([
@@ -300,7 +300,7 @@ $productSchema = [
 </head>
 <body>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/header.php'; ?>
 
 <!-- Hero Section with Primary H1 -->
 <div class="ipo-detail-hero">
@@ -446,8 +446,8 @@ $productSchema = [
                 <p style="font-size: 13px; color: #64748b; line-height: 1.5; margin-bottom: 16px;">
                     Ensure your UPI ID is linked with your demat account or apply seamlessly through your net banking ASBA facility.
                 </p>
-                <a href="/iposetu/allotment.php" class="cta-btn">Check Allotment Status &rarr;</a>
-                <a href="/iposetu/calendar/" style="display: block; margin-top: 10px; font-size: 13px; color: #64748b; text-decoration: none; font-weight: 600;">
+                <a href="<?= BASE_URL ?>allotment.php" class="cta-btn">Check Allotment Status &rarr;</a>
+                <a href="<?= BASE_URL ?>calendar/" style="display: block; margin-top: 10px; font-size: 13px; color: #64748b; text-decoration: none; font-weight: 600;">
                     &larr; Back to IPO Calendar
                 </a>
             </div>
@@ -461,17 +461,17 @@ $productSchema = [
                 </div>
                 <ul style="list-style: none; padding: 0; margin: 0;">
                     <li style="margin-bottom: 12px;">
-                        <a href="/iposetu/tools/ipo-calculator.php" style="color: #2563eb; font-weight: 600; text-decoration: none; font-size: 14px; display: flex; align-items: center; justify-content: space-between;">
+                        <a href="<?= BASE_URL ?>tools/ipo-calculator.php" style="color: #2563eb; font-weight: 600; text-decoration: none; font-size: 14px; display: flex; align-items: center; justify-content: space-between;">
                             <span>IPO Margin Calculator</span> <span>&rarr;</span>
                         </a>
                     </li>
                     <li style="margin-bottom: 12px;">
-                        <a href="/iposetu/tools/listing-gain-calculator.php" style="color: #2563eb; font-weight: 600; text-decoration: none; font-size: 14px; display: flex; align-items: center; justify-content: space-between;">
+                        <a href="<?= BASE_URL ?>tools/listing-gain-calculator.php" style="color: #2563eb; font-weight: 600; text-decoration: none; font-size: 14px; display: flex; align-items: center; justify-content: space-between;">
                             <span>Listing Gain Calculator</span> <span>&rarr;</span>
                         </a>
                     </li>
                     <li>
-                        <a href="/iposetu/tools/sip-calculator.php" style="color: #2563eb; font-weight: 600; text-decoration: none; font-size: 14px; display: flex; align-items: center; justify-content: space-between;">
+                        <a href="<?= BASE_URL ?>tools/sip-calculator.php" style="color: #2563eb; font-weight: 600; text-decoration: none; font-size: 14px; display: flex; align-items: center; justify-content: space-between;">
                             <span>SIP Compounding Calculator</span> <span>&rarr;</span>
                         </a>
                     </li>
@@ -481,7 +481,7 @@ $productSchema = [
     </div>
 </div>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/footer.php'; ?>
 
 </body>
 </html>

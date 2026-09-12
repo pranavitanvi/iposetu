@@ -7,17 +7,17 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Zerodha Review 2026 – Brokerage Charges, App &amp; IPO Bidding | IPOSETU</title>
 <meta name="description" content="Complete review of Zerodha in India. Check account opening fees, trading charges, margin features, and one-click IPO application tools."/>
-<link class="style-link" href="/iposetu/assets/css/style.css?v=6.9" rel="stylesheet"/>
-<link href="/iposetu/assets/css/responsive.css?v=2.0" rel="stylesheet"/>
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/seo_helper.php'; echo iposetu_render_head_seo(); ?>
+<link class="style-link" href="<?= BASE_URL ?>assets/css/style.css?v=6.9" rel="stylesheet"/>
+<link href="<?= BASE_URL ?>assets/css/responsive.css?v=2.0" rel="stylesheet"/>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/seo_helper.php'; echo iposetu_render_head_seo(); ?>
 </head>
 <body>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/header.php'; ?>
     <div class="container" style="padding: 24px; margin-top: 20px; border-bottom: 1px solid var(--border-color); margin-bottom: 30px;">
         <div style="display: flex; justify-content: space-between; align-items: flex-end;">
             <div>
                 <div style="font-size: 12px; font-weight: 600; color: #64748b; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">
-                    <a href="/iposetu/brokers/" style="color: inherit; text-decoration: none;">Brokers</a> / <span style="color: var(--primary-color);">Review</span>
+                    <a href="<?= BASE_URL ?>brokers/" style="color: inherit; text-decoration: none;">Brokers</a> / <span style="color: var(--primary-color);">Review</span>
                 </div>
                 <h1 style="font-size: 36px; font-weight: 800; color: #0f172a; margin-bottom: 12px; letter-spacing: -0.5px; display: flex; align-items: center; gap: 16px;">
                     ZERODHA <span style="font-size: 18px; color: #eab308; display: flex; align-items: center;">★★★★★ <span style="color: #475569; font-size: 14px; font-weight: 600; margin-left: 8px;">(4.8)</span></span>
@@ -139,11 +139,11 @@
         </div>
     </main>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/iposetu/includes/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/footer.php'; ?>
 
 <div id="sticky-bottom-ad-container"></div>
-<script src="/iposetu/assets/js/components.js?v=6.1"></script>
-<script src="/iposetu/assets/js/ad-manager.js?v=1.2"></script>
-<script src="/iposetu/assets/js/main.js"></script>
+<script src="<?= BASE_URL ?>assets/js/components.js?v=6.1"></script>
+<script src="<?= BASE_URL ?>assets/js/ad-manager.js?v=1.2"></script>
+<script src="<?= BASE_URL ?>assets/js/main.js"></script>
 </body>
 </html>
