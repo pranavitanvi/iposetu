@@ -1,4 +1,5 @@
 <?php
+require_once $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/config.php';
 // sitemap-news.php - News & Market Articles XML Sitemap
 header('Content-Type: application/xml; charset=utf-8');
 require_once __DIR__ . '/includes/seo_config.php';

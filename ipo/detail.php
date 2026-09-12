@@ -1,4 +1,5 @@
 <?php
+require_once $_SERVER['DOCUMENT_ROOT'] . (isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1') ? '/iposetu/' : '/') . 'includes/config.php';
 // ipo/detail.php - Dynamic IPO & SME Detail Page with Full SEO & Schema Markup
 require_once __DIR__ . '/../api/db.php';
 require_once __DIR__ . '/../includes/seo_helper.php';
